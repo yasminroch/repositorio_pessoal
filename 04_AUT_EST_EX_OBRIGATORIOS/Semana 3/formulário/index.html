@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+</head>
+<body>
+    <h1 text align="center">Cálculo da altura máxima e do tempo</h1>
+    <fieldset>
+        <div align="center">
+            <!--Valor da altura-->
+            <p>insira o valor da velocidade inicial</p>
+            <input id="Vi" type="velocidadeinicial"/>
+          <button id="calcular" onclick="calcularAltura()">Calcular altura</button>
+        </div>
+    </fieldset>
+    <script>
+        //valor da altura
+        function calcularAltura(){
+        var input = document.getElementById("Vi").value;
+         var resultado = ["altura em metros="+Math.pow(input,2)/20, "tempo em segundos="+input/10];
+         alert(resultado);
+        }
+    </script>
+</body>
+</html>
