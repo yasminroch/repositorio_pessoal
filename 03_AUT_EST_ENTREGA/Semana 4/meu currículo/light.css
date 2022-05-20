@@ -1,0 +1,19 @@
+body{
+    background-color: white;
+
+}
+
+.experiencia1{
+    background-color: lightsalmon;
+}
+
+.foto{
+    border: 3px solid lightsalmon;
+}
+
+.switch{
+    background-color: lightsalmon;
+    justify-content: center;
+    display: flex;
+    text-align: center;
+}
