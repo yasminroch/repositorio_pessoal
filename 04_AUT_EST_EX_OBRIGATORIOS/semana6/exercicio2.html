@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inversão de valores</title>
+</head>
+<body>
+    <p>Primeiro valor:</p>
+    <input id="valor1" type="text">
+    <br>
+    <p>Segundo valor:</p>
+    <input id="valor2" type="text">
+    <br>
+    <button onclick="invert()">Inverter</button>
+
+   <script>
+     function invert(){
+     var number1 = document.getElementById("valor1").value;
+     var number2 = document.getElementById("valor2").value;
+     var change = number1;
+     number1=number2;
+     number2=change;
+
+     document.write("Valores anteriores:\n"+
+        "valor 1="+document.getElementById("valor1").value+"\n"+
+        "valor 2="+document.getElementById("valor2").value+"\n\n"+
+        "Valores invertidos:\n"+
+        "valor 1="+number1+"\n"+
+        "valor 2="+number2+"\n\n");
+    }
+   </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Celular</title>
+</head>
+<body>
+<p>Digite o número de celular seguindo a adequadação de 11 dígitos</p>
+<input type="text" id="phone_field" placeholder="(xx) xxxxx-xxxx" maxlength="11"/ required>
+<button>enviar</button>
+
+<script>
+    //código usado como base em um já existente, referência para dev.to, fonte essencial para a aprendizagem
+   let phone_field = document.querySelector('#phone_field');
+   phone_field.addEventListener("blur", function(e) {
+       let phone = this.value.replace( /\D/g , "");
+
+   if (phone.length==11){
+       phone = phone.replace(/^(\d{2})(\d)/g,"($1) $2");
+       result_phone = phone.replace(/(\d)(\d{4})$/,"$1-$2");
+       document.getElementById('phone_field').value = result_phone;
+  } else {
+      alert("Por favor, siga a adequação e digite o total 11 números.");
+  }
+})
+</script>
+</body>
+</html>
