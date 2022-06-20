@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ímpar ou par</title>
+</head>
+<body>
+    <h>Digite a centena no campo abaixo, lembrando que os ma´ximo de caracteres permitidos é três</h>
+    <br>
+    <br>
+    <input type="text" id="numero" maxlength="3">
+    <button onclick="resposta()">Resposta</button>
+
+    <script>
+        function resposta(){
+            var num = document.getElementById("numero").value;
+            var int_num = Number(num);
+            if (int_num%2==0){
+                alert("par");
+            }else{
+                alert("ímpar");
+            }
+
+        }
+    </script>
+</body>
+</html>

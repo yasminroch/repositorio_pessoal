@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>insira os nomes no input abaixo e veja a ordenação através do alert</p>
+    <input type="text">
+    <button id="exemplo">Salvar nome</button>
+<script>
+var campo = document.querySelector("input")
+var btn = document.querySelector("button")
+var nome = [];
+
+btn.onclick = function(){
+    nome.push(campo.value);
+    nome.sort(function(a,b){
+    let x = a.toUpperCase(),
+    y = b.toUpperCase();
+    return x == y ? 0 : x > y ? 1: -1;
+});
+    alert(nome);
+}
+
+</script>
+</body>
+</html>
